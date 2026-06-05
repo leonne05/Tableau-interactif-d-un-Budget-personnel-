@@ -27,7 +27,7 @@ OUTPUT_DIR.mkdir(exist_ok=True)
 
 
 # ── 1. Load & Clean ────────────────────────────────────────────────────────────
-def load_data(filepath: str = "data/transactions.csv") -> pd.DataFrame:
+def load_data(filepath: str = "transactions.csv") -> pd.DataFrame:
     df = pd.read_csv(filepath, parse_dates=["date"])
     df["month"]      = df["date"].dt.to_period("M")
     df["month_name"] = df["date"].dt.strftime("%b %Y")

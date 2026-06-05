@@ -35,7 +35,7 @@ CATEGORY_COLORS = {
 
 # ── Load data ──────────────────────────────────────────────────────────────────
 @st.cache_data
-def load_data(path: str = "data/transactions.csv") -> pd.DataFrame:
+def load_data(path: str = "transactions.csv") -> pd.DataFrame:
     df = pd.read_csv(path, parse_dates=["date"])
     df["month"]      = df["date"].dt.to_period("M").dt.to_timestamp()
     df["month_label"] = df["date"].dt.strftime("%b %Y")
