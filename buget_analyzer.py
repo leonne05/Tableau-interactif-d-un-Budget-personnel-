@@ -1,10 +1,3 @@
-"""
-Personal Budget Analyzer
-========================
-A clean Python project to analyze personal finances.
-Author: Data Analyst Portfolio Project
-"""
-
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
